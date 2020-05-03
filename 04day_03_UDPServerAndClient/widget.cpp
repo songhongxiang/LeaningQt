@@ -18,7 +18,7 @@ Widget::Widget(QWidget *parent) :
     udpSocket->bind(QHostAddress::AnyIPv4,8888);
 
     //加入某个组播
-    //组播地址是D类地址
+    //组播地址必须是D类地址
     udpSocket->joinMulticastGroup(QHostAddress("224.0.0.2"));
     //udpSocket->leaveMulticastGroup(); //退出组播
 
