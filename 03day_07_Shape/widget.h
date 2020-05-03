@@ -14,9 +14,14 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
+protected:
+    void paintEvent(QPaintEvent *);
+    void mouseMoveEvent(QMouseEvent *e);
+    void mousePressEvent(QMouseEvent *e);
 
 private:
     Ui::Widget *ui;
+    QPoint p;
 };
 
 #endif // WIDGET_H
